@@ -18,10 +18,25 @@ public abstract class ChessPiece extends Piece{
         this.color = color;
     }
     
+    protected void increaseMoveCount()
+    {
+        moveCount++;
+    }
+    
+    protected void decreaseMoveCount()
+    {
+        moveCount--;
+    }
+    
     protected boolean isThereOpponentPiece(Position position)
     {
         ChessPiece p = (ChessPiece)getBoard().piece(position);
         return p != null && p.getColor() != color;
+    }
+    
+    public int getMoveCount()
+    {
+        return moveCount;
     }
     
     public ChessPosition getChessPosition()
