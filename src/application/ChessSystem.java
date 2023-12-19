@@ -62,8 +62,8 @@ public class ChessSystem {
                 }
             }
             catch (ChessException e){
-            System.out.println(e.getMessage());
-            scan.nextLine();
+                System.out.println(e.getMessage());
+                scan.nextLine();
             
             }
             catch (InputMismatchException e){
